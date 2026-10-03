@@ -6,6 +6,7 @@ agents:
     enabled: true
     nameOverride: "caocao-codex"
     image: "ghcr.io/openabdev/openab-codex:latest"
+    configUrl: "https://raw.githubusercontent.com/xfalcons/openab-config/refs/heads/main/guandu/config-caocao.toml"
     secretEnv:
       - name: DISCORD_BOT_TOKEN
         secretName: openab-secret
@@ -21,6 +22,7 @@ agents:
     enabled: true
     nameOverride: "zhangliao-opencode"
     image: "ghcr.io/openabdev/openab-opencode:latest"
+    configUrl: "https://raw.githubusercontent.com/xfalcons/openab-config/refs/heads/main/guandu/config-zhangliao.toml"
     secretEnv:
       - name: DISCORD_BOT_TOKEN
         secretName: openab-secret
