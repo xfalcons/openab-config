@@ -1,0 +1,33 @@
+agents:
+  kiro:
+    enabled: false
+
+  caocao:
+    enabled: true
+    nameOverride: "caocao-codex"
+    image: "ghcr.io/openabdev/openab-codex:latest"
+    secretEnv:
+      - name: DISCORD_BOT_TOKEN
+        secretName: openab-secret
+        secretKey: caocao-discord-bot-token
+      - name: SLACK_BOT_TOKEN
+        secretName: openab-secret
+        secretKey: caocao-slack-bot-token
+      - name: SLACK_APP_TOKEN
+        secretName: openab-secret
+        secretKey: caocao-slack-app-token
+
+  zhangliao:
+    enabled: true
+    nameOverride: "zhangliao-opencode"
+    image: "ghcr.io/openabdev/openab-opencode:latest"
+    secretEnv:
+      - name: DISCORD_BOT_TOKEN
+        secretName: openab-secret
+        secretKey: zhangliao-discord-bot-token
+      - name: SLACK_BOT_TOKEN
+        secretName: openab-secret
+        secretKey: zhangliao-slack-bot-token
+      - name: SLACK_APP_TOKEN
+        secretName: openab-secret
+        secretKey: zhangliao-slack-app-token
