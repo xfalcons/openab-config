@@ -1,3 +1,7 @@
+image:
+  repository: ghcr.io/openabdev/openab
+  tag: "0.10.0-beta.5"
+
 agents:
   kiro:
     enabled: false
@@ -7,29 +11,11 @@ agents:
     nameOverride: "caocao-codex"
     image: "ghcr.io/openabdev/openab-codex:latest"
     configUrl: "https://raw.githubusercontent.com/xfalcons/openab-config/refs/heads/main/guandu/config-caocao.toml"
-    secretEnv:
-      - name: DISCORD_BOT_TOKEN
-        secretName: openab-secret
-        secretKey: caocao-discord-bot-token
-      - name: SLACK_BOT_TOKEN
-        secretName: openab-secret
-        secretKey: caocao-slack-bot-token
-      - name: SLACK_APP_TOKEN
-        secretName: openab-secret
-        secretKey: caocao-slack-app-token
+    serviceAccountName: "openab"
 
   zhangliao:
     enabled: true
     nameOverride: "zhangliao-opencode"
     image: "ghcr.io/openabdev/openab-opencode:latest"
     configUrl: "https://raw.githubusercontent.com/xfalcons/openab-config/refs/heads/main/guandu/config-zhangliao.toml"
-    secretEnv:
-      - name: DISCORD_BOT_TOKEN
-        secretName: openab-secret
-        secretKey: zhangliao-discord-bot-token
-      - name: SLACK_BOT_TOKEN
-        secretName: openab-secret
-        secretKey: zhangliao-slack-bot-token
-      - name: SLACK_APP_TOKEN
-        secretName: openab-secret
-        secretKey: zhangliao-slack-app-token
+    serviceAccountName: "openab"

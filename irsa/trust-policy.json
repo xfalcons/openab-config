@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "arn:aws:iam::255083652103:oidc-provider/my-openab-configs.s3.us-east-1.amazonaws.com"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "StringEquals": {
+          "my-openab-configs.s3.us-east-1.amazonaws.com:sub": "system:serviceaccount:guandu:openab"
+        }
+      }
+    }
+  ]
+}

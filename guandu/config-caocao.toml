@@ -1,7 +1,12 @@
+[secrets.refs]
+discord_bot_token = "aws-sm://openab/prod#caocao-discord-bot-token"
+slack_bot_token = "aws-sm://openab/prod#caocao-slack-bot-token"
+slack_app_token = "aws-sm://openab/prod#caocao-slack-app-token"
+
 # Enable one or more adapters. At least one [discord] or [slack] section is required.
 
 [discord]
-bot_token = "${DISCORD_BOT_TOKEN}"
+bot_token = "${secrets.discord_bot_token}"
 allowed_channels = []     # empty or omitted = allow all channels
 allowed_users = ["873137572434563122"]  # empty or omitted = allow all users
 allow_bot_messages = "mentions"  # "off" (default) | "mentions" | "all" "mentions" is recommended for multi-agent collaboration
@@ -51,8 +56,8 @@ max_bot_turns = 100
 #                                       # to avoid streamed-edit states re-firing app_mention.
 #                                       # What a send-once message *contains* is controlled by [reactions] narration_display.
 [slack]
-bot_token = "${SLACK_BOT_TOKEN}"     # Bot User OAuth Token (xoxb-...)
-app_token = "${SLACK_APP_TOKEN}"     # App-Level Token (xapp-...) for Socket Mode
+bot_token = "${secrets.slack_bot_token}"     # Bot User OAuth Token (xoxb-...)
+app_token = "${secrets.slack_app_token}"     # App-Level Token (xapp-...) for Socket Mode
 allowed_channels = ["C0B73E1A54K"]   # empty or omitted = allow all channels
 allowed_users = ["U36243N5N"]      # empty or omitted = allow all users
 allow_user_messages = "multibot-mentions"
