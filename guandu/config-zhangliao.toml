@@ -3,6 +3,9 @@ discord_bot_token = "aws-sm://openab/prod#zhangliao-discord-bot-token"
 slack_bot_token = "aws-sm://openab/prod#zhangliao-slack-bot-token"
 slack_app_token = "aws-sm://openab/prod#zhangliao-slack-app-token"
 
+[secrets.aws]
+region = "us-east-1"          # override region
+
 # Enable one or more adapters. At least one [discord] or [slack] section is required.
 
 [discord]
