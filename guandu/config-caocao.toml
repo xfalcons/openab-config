@@ -222,7 +222,7 @@ max_bot_turns = 100
 
 [agent]
 command = "codex-acp"
-working_dir = "/home/node"
+# working_dir = "/home/node"
 # env = { OPENAI_API_KEY = "${OPENAI_API_KEY}" }
 # Recommended for containerized deployments (outer container = security boundary):
 # [pool]
