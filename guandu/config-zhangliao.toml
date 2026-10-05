@@ -243,7 +243,7 @@ max_bot_turns = 100
 [agent]
 command = "opencode"
 args = ["acp"]
-working_dir = "/home/node"
+working_dir = "/home/agent"
 # # Note: opencode handles tool authorization internally and never emits
 # # session/request_permission — all tools run without user confirmation,
 # # equivalent to --trust-all-tools on other backends.
