@@ -563,3 +563,5 @@ aws secretsmanager create-secret \
     "VersionId": "caf33b83-53d4-49df-9db8-8af0f5382723"
 }
 
+aws secretsmanager get-secret-value \
+    --secret-id openab/prod
