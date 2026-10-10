@@ -9,6 +9,7 @@ agents:
     enabled: true
     nameOverride: "caocao-codex"
     image: "ghcr.io/xfalcons/openab-codex:0.159.0"
+    workingDir: /home/node
     configUrl: "https://raw.githubusercontent.com/xfalcons/openab-config/refs/heads/main/guandu/config-caocao.toml"
     serviceAccountName: "openab"
 
@@ -16,5 +17,6 @@ agents:
     enabled: true
     nameOverride: "zhangliao-opencode"
     image: "ghcr.io/openabdev/openab-opencode:pre-beta"
+    workingDir: /home/node
     configUrl: "https://raw.githubusercontent.com/xfalcons/openab-config/refs/heads/main/guandu/config-zhangliao.toml"
     serviceAccountName: "openab"

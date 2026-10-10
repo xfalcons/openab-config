@@ -421,5 +421,5 @@ error_hold_ms = 2500
 # coding-CLI-only hosts, dev loops, and CI runners (#1451).
 # NOTE: the endpoint has no authentication — it must stay on loopback
 # (non-loopback addresses are refused at startup).
-# [mcp]
-# listen = "127.0.0.1:8848"                  # loopback only
+[mcp]
+listen = "127.0.0.1:8848"                  # loopback only
