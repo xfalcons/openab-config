@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: octobroker-config
+  labels:
+    app.kubernetes.io/name: octobroker
+data:
+  config.toml: |
+    port = 8080
+    allowed_owners = ["xfalcons"]
+
+    [mcp.github_app]
+    app_id = "5258287"
+    private_key = "aws:secretsmanager:openab/prod:github-app-private-key"
+    owner = "xfalcons"  
+
+    [mcp]
+    enabled = true

@@ -18,3 +18,4 @@ Temporary Items
 
 **/*secrets*
 keys/
+**/*private-key.pem
