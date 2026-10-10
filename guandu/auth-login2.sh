@@ -18,3 +18,9 @@ kubectl -n guandu apply -f k8s
 codex mcp add --url http://octobroker.guandu.svc.cluster.local:8080/mcp
 
 
+docker login --username xfalcons ghcr.io
+
+kubectl run --image ghcr.io/xfalcons/openab-codex:0.159.0 openab-xxx
+docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/xfalcons/openab-codex:0.159.0 -f Dockerfile.codex .
+
+

@@ -1,6 +1,5 @@
 image:
-  repository: ghcr.io/openabdev/openab
-  tag: "0.10.0-beta.5"
+  tag: "pre-beta"
 
 agents:
   kiro:
@@ -9,13 +8,13 @@ agents:
   caocao:
     enabled: true
     nameOverride: "caocao-codex"
-    image: "ghcr.io/openabdev/openab-codex:latest"
+    image: "ghcr.io/xfalcons/openab-codex:0.159.0"
     configUrl: "https://raw.githubusercontent.com/xfalcons/openab-config/refs/heads/main/guandu/config-caocao.toml"
     serviceAccountName: "openab"
 
   zhangliao:
     enabled: true
     nameOverride: "zhangliao-opencode"
-    image: "ghcr.io/openabdev/openab-opencode:latest"
+    image: "ghcr.io/openabdev/openab-opencode:pre-beta"
     configUrl: "https://raw.githubusercontent.com/xfalcons/openab-config/refs/heads/main/guandu/config-zhangliao.toml"
     serviceAccountName: "openab"

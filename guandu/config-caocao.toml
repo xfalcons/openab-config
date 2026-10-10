@@ -222,11 +222,13 @@ max_bot_turns = 100
 
 [agent]
 command = "codex-acp"
-# working_dir = "/home/node"
+working_dir = "/home/node"
 # env = { OPENAI_API_KEY = "${OPENAI_API_KEY}" }
 # Recommended for containerized deployments (outer container = security boundary):
-# [pool]
-# default_config_options = { mode = "agent-full-access" }
+[pool]
+default_config_options = { mode = "agent-full-access" }
+max_sessions = 10
+session_ttl_hours = 24
 
 # [agent]
 # command = "gemini"
@@ -282,9 +284,9 @@ command = "codex-acp"
 # #   3. Deployment key: env = { GROK_DEPLOYMENT_KEY = "${GROK_DEPLOYMENT_KEY}" }
 # # See docs/grok.md for details.
 
-[pool]
-max_sessions = 10
-session_ttl_hours = 24
+# [pool]
+# max_sessions = 10
+# session_ttl_hours = 24
 # Hard ceiling (sec) per prompt; see #732. Default: 1800 (30 min).
 # prompt_hard_timeout_secs = 1800
 # Liveness-check cadence (sec) for the recv loop; see #732. Default: 30.
